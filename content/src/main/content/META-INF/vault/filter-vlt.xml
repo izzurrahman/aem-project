@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/libs/foundation"/>
+	<filter root="/apps/myproject"/>
+	<filter root="/apps/training"/>
+    <filter root="/apps/sling"/>
+    <filter root="/apps/cq"/>	
+	<filter root="/conf/MyFirstTemplateFolder"/>
+	<filter root="/conf/democontentfragementmodel"/>
+    <filter root="/content/forms/af/youtubedemo"/>
+    <filter root="/content/forms/af/fragment1"/>
+    <filter root="/content/forms/af/fragment2"/>
+    <filter root="/content/forms/af/trainingform"/>    
+	<filter root="/content/dam/formsanddocuments/youtubedemo"/>
+	<filter root="/content/dam/formsanddocuments/fragment1"/>
+	<filter root="/content/dam/formsanddocuments/fragment2"/>	
+	<filter root="/content/dam/formsanddocuments/trainingform"/>
+	<filter root="/content/dam/training"/>			
+	<filter root="/content/WeTrain"/>
+	<filter root="/etc/designs/training"/>	
+	<filter root="/etc/acs-commons/lists/titlelist"/>	
+</workspaceFilter>

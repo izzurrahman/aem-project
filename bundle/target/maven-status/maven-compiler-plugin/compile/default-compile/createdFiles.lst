@@ -1,0 +1,7 @@
+com/aem/community/package-info.class
+com/aem/community/impl/filters/LoggingFilter.class
+com/adobe/community/core/servlets/GetRunningWorkflowsCount.class
+com/aem/community/impl/HelloServiceImpl.class
+com/adobe/community/config/ISetting.class
+com/aem/community/HelloService.class
+com/adobe/community/config/ISettingImpl.class

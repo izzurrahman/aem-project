@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-05-10T10:10:18.144-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/training/templates/contentpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="English"
+        sling:resourceType="training/components/structure/contentpage">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+        <hero
+            jcr:lastModified="{Date}2020-05-03T18:53:33.677-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Hero Components"
+            sling:resourceType="training/components/content/hero"
+            fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg"/>
+        <responsivegrid
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <text
+                jcr:created="{Date}2020-05-03T19:52:04.813-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-03T19:53:24.228-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>This is sample text&amp;nbsp;This is sample textThis is sample textThis is sample textThis is sample textThis is sample textThis is sample textThis is sample textThis is sample text&lt;/p>&#xa;"
+                textIsRich="true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="11"/>
+                    <smallScreen
+                        jcr:primaryType="nt:unstructured"
+                        width="9"/>
+                </cq:responsive>
+            </text>
+            <aemform
+                jcr:created="{Date}2020-05-09T15:10:28.836-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-09T15:10:28.836-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/aemform"
+                formRef="/content/dam/formsanddocuments/dexter-form"
+                formType="adaptiveForm"
+                thankyouConfig="message"/>
+        </responsivegrid>
+        <title
+            jcr:lastModified="{Date}2020-05-10T10:10:18.142-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="[,Title 2]"
+            sling:resourceType="training/components/content/title"
+            textIsRich="true"/>
+    </jcr:content>
+    <aboutus/>
+    <communities/>
+    <experiences/>
+    <products/>
+</jcr:root>

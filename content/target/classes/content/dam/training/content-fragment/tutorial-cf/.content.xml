@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="88e87765-22a1-4adb-b1f9-f79afbcf719c">
+    <jcr:content
+        cq:name="tutorial-cf"
+        cq:parentPath="/content/dam/training/content-fragment"
+        dam:assetState="processed"
+        dam:relativePath="training/content-fragment/tutorial-cf"
+        jcr:description="This is my content fragment"
+        jcr:lastModified="{Date}2020-05-09T22:48:12.289-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Tutorial CF"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2020-05-09T22:48:12.242-04:00">
+        <associated
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="sling/collection">
+            <sling:members jcr:primaryType="nt:unstructured"/>
+        </associated>
+        <metadata
+            dam:extracted="{Date}2020-05-09T22:48:12.245-04:00"
+            dam:sha1="9a23158828b8b8c169398b758dd081f1ce768e66"
+            dam:size="{Long}1405"
+            dc:format="text/html"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <model
+            jcr:description="A simple fragment, containing one single element and no predefined variations"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Simple Fragment"
+            precreateElements="{Boolean}true"
+            version="{Long}2">
+            <elements jcr:primaryType="nt:unstructured">
+                <main
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Main"
+                    defaultContent=""
+                    name="main"/>
+            </elements>
+            <variations jcr:primaryType="nt:unstructured">
+                <app
+                    jcr:description="This frgment for app"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="app"
+                    name="app">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        synchronizeWithVersion="[main:d0439cc8-62f4-47ec-9fba-2a1e1e0b2342]"/>
+                </app>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}2"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}2"
+                lastUsed="{Date}2020-05-09T22:33:05.445-04:00"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

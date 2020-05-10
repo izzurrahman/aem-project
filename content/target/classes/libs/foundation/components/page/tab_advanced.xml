@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Advanced">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <advanced
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <language
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-pagelanguage"
+                    fieldLabel="Language"
+                    name="./jcr:language"
+                    optionsProvider="CQ.utils.WCM.getLanguageOptions"
+                    type="select"
+                    xtype="selection"/>
+                <redirect
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Redirect"
+                    name="./redirectTarget"
+                    xtype="pathfield"/>
+                <designpath
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Design"
+                    name="./cq:designPath"
+                    predicate="hierarchyNotFile"
+                    rootPath="/etc/designs"
+                    xtype="pathfield"/>
+                <alias
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Alias"
+                    name="./sling:alias"
+                    xtype="textfield"/>
+            </items>
+        </advanced>
+        <siteStructure
+            jcr:primaryType="cq:Widget"
+            script="fieldset_sitestructure.json.jsp"
+            xtype="slingscriptinclude"/>
+        <cug
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Closed User Group"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <manageCug
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Info"
+                    hidden="{Boolean}false"
+                    hideLabel="{Boolean}true"
+                    html="Refer to &lt;a href=mnt/overlay/wcm/core/content/sites/properties.html>link&lt;/a>to setup Closed User Group Properties "
+                    ignoreData="{Boolean}true"
+                    itemId="./cq:cugEnable"
+                    xtype="static"/>
+                <deprecatedCugInfo
+                    jcr:primaryType="cq:Widget"
+                    hidden="{Boolean}false"
+                    hideLabel="{Boolean}true"
+                    html="The Closed User Group cannot be edited because the page is using a deprecated configuration for the Closed User Group"
+                    ignoreData="{Boolean}true"
+                    itemId="./cq:cugDeprecatedInfo"
+                    xtype="static"/>
+                <deprecatedCug
+                    jcr:primaryType="cq:Widget"
+                    hidden="{Boolean}false"
+                    hideLabel="{Boolean}true"
+                    html="&lt;a href=https://adobe.com/go/aem6_4_docs_cug_migration_en>Link for migration to new CUG configuration&lt;/a>"
+                    ignoreData="{Boolean}true"
+                    itemId="./cq:cugDeprecated"
+                    xtype="static"/>
+            </items>
+        </cug>
+        <export
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Export"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <template
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Export Configuration"
+                    name="./cq:exportTemplate"
+                    predicate="nosystem"
+                    rootPath="/etc/contentsync/templates"
+                    rootTitle="Templates"
+                    xtype="pathfield"/>
+            </items>
+        </export>
+    </items>
+</jcr:root>

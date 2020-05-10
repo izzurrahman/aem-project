@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="com.adobe.community.config.ISettingImpl" configuration-policy="require" activate="activate">
+        <implementation class="com.adobe.community.config.ISettingImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.community.config.ISetting"/>
+        </service>
+        <property name="test.key" type="String" value="12AA44&gt;&gt;"/>
+        <property name="service.pid" value="com.adobe.community.config.ISettingImpl"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.aem.community.impl.HelloServiceImpl">
+        <implementation class="com.aem.community.impl.HelloServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.aem.community.HelloService"/>
+        </service>
+        <property name="service.pid" value="com.aem.community.impl.HelloServiceImpl"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.aem.community.impl.filters.LoggingFilter">
+        <implementation class="com.aem.community.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700"/>
+        <property name="sling.filter.scope" value="REQUEST"/>
+        <property name="service.pid" value="com.aem.community.impl.filters.LoggingFilter"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.adobe.community.core.servlets.GetRunningWorkflowsCount">
+        <implementation class="com.adobe.community.core.servlets.GetRunningWorkflowsCount"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="bin/app/main"/>
+        <property name="sling.servlet.methods" value="POST"/>
+        <property name="service.pid" value="com.adobe.community.core.servlets.GetRunningWorkflowsCount"/>
+        <reference name="iSetting" interface="com.adobe.community.config.ISetting" cardinality="1..1" policy="static" bind="bindISetting" unbind="unbindISetting"/>
+    </scr:component>
+</components>

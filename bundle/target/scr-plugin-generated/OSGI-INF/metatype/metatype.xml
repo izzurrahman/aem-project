@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="com.adobe.community.config.ISettingImpl" name="[Izzur] -Setting" description="Desc">
+        <AD id="test.key" type="String" default="12AA44&gt;&gt;" name="KEY CONFIG" description="Desc 1"/>
+    </OCD>
+    <Designate pid="com.adobe.community.config.ISettingImpl">
+        <Object ocdref="com.adobe.community.config.ISettingImpl"/>
+    </Designate>
+</metatype:MetaData>

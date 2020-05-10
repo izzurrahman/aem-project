@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="189ec8d9-e22d-40a8-96df-e9a6833d3202">
+    <jcr:content
+        cq:name="democontent1"
+        cq:parentPath="/content/dam/training/content-fragment"
+        jcr:description=""
+        jcr:lastModified="{Date}2020-05-09T23:06:58.566-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="democontent1"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2020-05-09T23:06:58.566-04:00">
+        <data
+            cq:model="/conf/democontentfragementmodel/settings/dam/cfm/models/demomodel"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                moltiline="&lt;p>This is test&lt;/p>&#xa;"
+                moltiline_x0040_ContentType="text/html"
+                moltiline_x0040_LastModified="{Date}2020-05-09T23:06:36.195-04:00"/>
+            <version2
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                moltiline="&lt;p>This is test.This is test&lt;/p>&#xa;"
+                moltiline_x0040_ContentType="text/html"
+                moltiline_x0040_LastModified="{Date}2020-05-09T23:06:58.537-04:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <version2
+                    jcr:description=""
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="version2"
+                    name="version2">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        synchronizeWithVersion="[moltiline:5491723a-cff7-4db6-8cf9-75dbeb30aeb6]"/>
+                </version2>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

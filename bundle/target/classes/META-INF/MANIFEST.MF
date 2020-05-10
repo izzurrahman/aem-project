@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1588732204498
+Build-Jdk: 1.8.0_211
+Built-By: izzurrahman
+Bundle-Description: Maven Multimodule project for My Project.
+Bundle-ManifestVersion: 2
+Bundle-Name: My Project Bundle
+Bundle-SymbolicName: com.aem.community.echoproject-bundle
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.adobe.community.config;version="1.0.0.SNAPSHOT",com.
+ adobe.community.core.servlets;uses:="javax.management,org.apache.sling.
+ api,org.apache.sling.api.servlets,com.adobe.community.config";version="
+ 1.0.0.SNAPSHOT",com.aem.community;version="1.0.0"
+Import-Package: com.aem.community;version="[1.0,2)",javax.management,jav
+ ax.servlet,org.apache.sling.api;version="[2.1,3)",org.apache.sling.api.
+ request;version="[2.1,3)",org.apache.sling.api.servlets;version="[2.1,3
+ )",org.apache.sling.jcr.api;version="[2.1,3)",org.slf4j;version="[1.5,2
+ )"
+Service-Component: OSGI-INF/serviceComponents.xml
+Tool: Bnd-1.50.0

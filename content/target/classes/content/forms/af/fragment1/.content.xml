@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/fd/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2020-05-09T19:41:50.328-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/fd/af/templateForFragment/defaultFragmentTemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Fragment1"
+        sling:resourceType="fd/af/components/page/basePageForFragment">
+        <guideContainer
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideFragmentContainer"
+            fragmentModelRoot="/Order_1588720050860"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="fragment1"
+            schemaRef="/content/dam/formsanddocuments-fdm/test-dm"
+            schemaType="formdatamodel">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                    <guidetextbox
+                        jcr:created="{Date}2020-05-04T20:41:39.138-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-05-09T11:51:29.568-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Field 3"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/Order_1588720050860/quantity"
+                        guideNodeClass="guideTextBox"
+                        name="textbox1588639299197"
+                        textIsRich="[true,true,true]"/>
+                    <guidebutton
+                        jcr:created="{Date}2020-05-09T11:49:34.824-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-05-09T15:02:52.201-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Back"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="button1589039374864"
+                        textIsRich="[true,true]"
+                        type="Button">
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;\\n\\nguideBridge.getDataXML({\\n  success:function (guideResultObject){\\n    \\n    var resultObj=JSON.parse(guideResultObject.data);\\n    var formData=resultObj.afData.afBoundData.data.Order_1588720050860;\\n    var formDataJson=JSON.stringify(formData);\\n    alert(\\&quot;formDataJson=========================\\&quot;+formDataJson);\\n    \\n  }\,\\n  error : function (guideResultObject){\\n        alert(\\&quot;error>>>>>>>>>>>>>>>>>>>=\\&quot;+guideResultObject.data);\\n\\n  }\\n});\\n\\n\\n//Use JQuery AJAX request to post data to a Sling Servlet\\n    $.ajax({\\n         type: 'GET'\,    \\n        //url:'http://localhost:4502/content/mbean64/en.workflow.html'\,\\n      \\turl:'/libs/bin/app/main'\,\\n         success: function(msg){\\n   \\n           var myMsg = msg; \\n  \\n  \\n            alert(myMsg); \\n  \\n         }\,guideBridgeerror : function (guideResultObject){\\n        alert(\\&quot;error=\\&quot;+guideResultObject);\\n\\n  \\t}\\n     });\\n\\n//fragment_name_2.visible=false;\\n//\\n//\\n\\n\\nguideBridge.setFocus(get_started.somExpression);&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.button1589039374864&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton>
+                </items>
+            </rootPanel>
+        </guideContainer>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <smallScreen
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Decimal}479"/>
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}767"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}991"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>
